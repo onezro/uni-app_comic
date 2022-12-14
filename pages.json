@@ -1,0 +1,110 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "漫画"
+			}
+		},
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationStyle": "custom",
+				"onReachBottomDistance": 200
+				// "enablePullDownRefresh": true
+			}
+
+		},
+		{
+			"path": "pages/book/book",
+			"style": {
+				"navigationBarTitleText": "书架"
+			}
+
+		},
+		{
+			"path": "pages/user/user",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/detail/detail"
+			// "style": {
+			// 	"navigationStyle": "custom"
+			// }
+		},
+		{
+			"path": "pages/reader/reader",
+			"style": {
+				"navigationStyle": "custom",
+				"onReachBottomDistance": 200
+			}
+		},
+		{
+			"path": "pages/search/search"
+		},
+		{
+			"path": "pages/searchcomic/searchcomic"
+		},
+		{
+			"path": "pages/daily/daily",
+			"style": {
+				"navigationBarTitleText": "每日更新"
+			}
+		},
+		{
+			"path": "pages/leaderboard/leaderboard",
+			"style": {
+				"navigationBarTitleText": "排行榜"
+			}
+		},
+		{
+			"path": "pages/history/history",
+			"style": {
+				"navigationBarTitleText": "阅读历史"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#f0ac24",
+		"backgroundColor": "#f0ac24"
+	},
+	"tabBar": {
+		"borderStyle": "black", //边框颜色
+		"backgroundColor": "#F7F7F7", //背景颜色
+		"color": "#000000", //默认颜色
+		"selectedColor": "#f0ac24", //选中的颜色
+		// "iconWidth": "22px",
+		// "fontSize": "13px",
+		"list": [{
+				"iconPath": "static/img/mv.png",
+				"selectedIconPath": "static/img/mu.png",
+				"text": "首页",
+				"pagePath": "pages/home/home"
+			},
+			{
+				"iconPath": "static/img/mt.png",
+				"selectedIconPath": "static/img/ms.png",
+				"text": "书架",
+				"pagePath": "pages/book/book"
+			},
+			{
+				"iconPath": "static/img/mz.png",
+				"selectedIconPath": "static/img/my.png",
+				"text": "我的",
+				"pagePath": "pages/user/user"
+			}
+		]
+
+	},
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^van-(.*)": "@/wxcomponents/vant/$1/index.js" // 匹配wxcomponents目录内的vue文件
+		}
+	},
+
+	"uniIdRouter": {}
+}
